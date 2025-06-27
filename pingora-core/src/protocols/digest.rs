@@ -63,7 +63,7 @@ impl Default for TimingDigest {
 /// The interface to return socket-related information
 pub struct SocketDigest {
     #[cfg(unix)]
-    raw_fd: std::os::unix::io::RawFd,
+    pub raw_fd: std::os::unix::io::RawFd,
     #[cfg(windows)]
     raw_sock: std::os::windows::io::RawSocket,
     /// Remote socket address
